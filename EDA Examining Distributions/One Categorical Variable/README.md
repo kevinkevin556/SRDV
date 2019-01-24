@@ -12,4 +12,4 @@ ax.pie(x = iris_count,                             # how many sample from each c
        shadow = False,                             # shadow
        startangle = 30)                            # the degree to start, 0 as default 
 ```
-![Image of Matplotlib Example](https://github.com/kevinkevin556/SRDV/tree/master/EDA Examining Distributions/One Categorical Variable/image/matplotlib_pie.png)
+![Image of Matplotlib Example](https://github.com/kevinkevin556/SRDV/blob/master/EDA%20Examining%20Distributions/One%20Categorical%20Variable/image/matplotlib_pie.png?raw=true)
