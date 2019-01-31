@@ -37,3 +37,5 @@
     - An outlier might indicate a **mistake** in the data (like a typo, or a measuring error),
         - it **should be corrected if possible or else removed from the data before calculating** summary statistics or making inferences from the data (and the reason for the mistake should be investigated).
 
+Note that this example provides more intuition about variability by interpreting small variability as consistency, and large variability as lack of consistency. Also, through this example we learned that the center of the distribution is more meaningful as a typical value for the distribution when there is little variability (or, as statisticians say, little "noise") around it. When there is large variability, the center loses its practical meaning as a typical value.
+

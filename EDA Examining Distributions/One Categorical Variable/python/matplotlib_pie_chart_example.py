@@ -1,6 +1,6 @@
-# Pie Chart and Bar Plot: Using matplotlib.pyplot
+# Pie Chart Using matplotlib.pyplot
 
-import numpy as numpy
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -12,7 +12,7 @@ iris_count = [count(i) for i in iris_class]
 
 # pie chart
 fig, ax = plt.subplots(figsize=(12, 7))
-wedges, texts, autotexts = ax.pie(x = iris_count,                           # how many sample from each category 
+patches, texts, autotexts = ax.pie(x = iris_count,                           # how many sample from each category 
                                 labels = iris_class,
                                 colors = ('#F8766D', '#00BA38', '#619CFF'), # color for each wedge
                                 explode = (0.01, 0.01, 0.01),               # the fraction of the radius with which to offset each wedge from center
@@ -20,7 +20,7 @@ wedges, texts, autotexts = ax.pie(x = iris_count,                           # ho
                                 textprops = dict(color='w'),                # text properties: specifies the font color as white
                                 shadow = False,                             # shadow
                                 startangle = 30)                            # the degree to start, 0 as default 
-ax.legend(wedges, iris_class,
+ax.legend(patches , iris_class,
         title = "Class of Iris",
         loc = 'center left',
         bbox_to_anchor = (0.8, 0, 0.5, 0.5))   
