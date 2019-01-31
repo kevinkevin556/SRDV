@@ -1,0 +1,39 @@
+# One Quantative Variable Distribution
+
+## Measure of Center
+- The three main numerical measures for the center of a distribution are the **mode**, **mean**, and the **median**. 
+    - The mode is the most frequently occurring value. 
+    - The mean is the average value,
+    - The median is the middle value.
+- **The mean is very sensitive to outliers** (as it factors in their magnitude), while *the median is resistant to outliers*.
+- The **mean** is an appropriate measure of center only for **symmetric distributions with no outliers**. 
+- **In all other cases, the median** should be used to describe the center of the distribution.
+
+## Measure of Spread
+- Range
+    - Quantifies the variability by looking at the range covered by *ALL* the data
+    - Range = Max - min
+- Inter-Quartile Range (IQR)
+    - Measures the variability of a distribution by giving us the range covered by the *MIDDLE 50%* of the data.
+    - IQR = Q3 - Q1 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    = (Median of [median, Max]) - (Median of [min, median])
+    - The IQR should be used as a measure of spread of a distribution only when the median is used as a measure of center.
+
+
+## Outliers
+- **Detection**
+    - below Q1 - 1.5(IQR)
+    - above Q3 + 1.5(IQR)
+- **Three kinds of Outliers**
+    - Even though it is an extreme value, if an outlier
+        - can be understood to have been produced by **essentially the same sort of physical or biological process** as the rest of the data,
+        -  and if such extreme values are **expected to eventually occur again**,
+        -  then such an outlier indicates something important and interesting about the process you're investigating, and it **should be kept** in the data.
+    - If an outlier
+        -  can be explained to have been produced under **fundamentally different conditions** from the rest of the data 
+        - (or by a **fundamentally different process**),
+        -  such an outlier can be **removed** from the data if your goal is to investigate only the process that produced the rest of the data.
+    - An outlier might indicate a **mistake** in the data (like a typo, or a measuring error),
+        - it **should be corrected if possible or else removed from the data before calculating** summary statistics or making inferences from the data (and the reason for the mistake should be investigated).
+

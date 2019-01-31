@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # read in the data
-iris = pd.read_csv('../../data/iris.csv')
+iris = pd.read_csv('../../../data/iris.csv')
 iris_class = list(set(iris['Class']))
 count = lambda x: len([i for i, c in enumerate(iris['Class']) if c == x])
 iris_count = [count(i) for i in iris_class]

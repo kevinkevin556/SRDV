@@ -3,7 +3,7 @@ if(!require(ggplot2)){
     library(ggplot2)
 }
 
-iris <- read.csv("../../data/iris.csv", fileEncoding='UTF-8-BOM')
+iris <- read.csv("../../../data/iris.csv", fileEncoding='UTF-8-BOM')
 iris_class <- as.data.frame(table(iris$Class))
 names(iris_class) <- c('label', 'count')
 
@@ -20,8 +20,8 @@ count <- iris_class$count
 share <- count / sum(count) * 100
 for(i in 1:nrow(iris_class)){
     pie <- pie + annotate("text",
-                        x = 1, 
-                        y = cumsum(count)[i]-0.5*count[i],
+                        x = 1,                                  # x is now the distance from the original point                
+                        y = cumsum(count)[i]-0.5*count[i],      # y is now the angle coordinate
                         label = sprintf("%.2f%%", share[i]), 
                         colour = "white",
                         fontface= "bold") 
@@ -29,9 +29,9 @@ for(i in 1:nrow(iris_class)){
 
 # Set labels
 pie <- pie + 
-    labs(fill = "Class if Iris") +
-    labs(x = NULL) +
-    labs(y = NULL)
+    labs(fill = "Class if Iris") +  # Rename the legend label
+    labs(x = NULL) +                # Remove x-axis label
+    labs(y = NULL)                  # Remove y-axis label
 
 # Set Title
 pie <- pie + 
