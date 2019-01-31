@@ -8,3 +8,8 @@ iris = pd.read_csv('../../../data/iris.csv')
 quantitatives = iris[['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth']]
 
 # draw boxplot
+sns.set(style="whitegrid")
+fig, ax = plt.subplots(figsize=(12, 7))
+ax = sns.boxplot(data = quantitatives)
+ax.set_title("Boxplots of Iris' characteristics")
+plt.show()

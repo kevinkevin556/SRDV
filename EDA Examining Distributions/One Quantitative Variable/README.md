@@ -37,5 +37,27 @@
     - An outlier might indicate a **mistake** in the data (like a typo, or a measuring error),
         - it **should be corrected if possible or else removed from the data before calculating** summary statistics or making inferences from the data (and the reason for the mistake should be investigated).
 
+
+## Side-by-side boxplot
 Note that this example provides more intuition about variability by interpreting small variability as consistency, and large variability as lack of consistency. Also, through this example we learned that the center of the distribution is more meaningful as a typical value for the distribution when there is little variability (or, as statisticians say, little "noise") around it. When there is large variability, the center loses its practical meaning as a typical value.
 
+### ［Boxplot］ Python: Matplotlib.pyplot 
+```python
+fig, ax = plt.subplots(figsize=(12, 7))
+result = ax.boxplot(x = quantitatives.values,
+                    labels = quantitatives.columns,
+                    notch = False)
+ax.set_title("Boxplots of Iris' characteristics")
+plt.show()
+```
+![Image of Matplotlib Boxplot Example](https://github.com/kevinkevin556/SRDV/blob/master/EDA%20Examining%20Distributions/One%20Quantitative%20Variable/image/matplotlib_boxplot.png?raw=true)
+
+### ［Boxplot］ Python: Seaborn
+```python
+sns.set(style="whitegrid")
+fig, ax = plt.subplots(figsize=(12, 7))
+ax = sns.boxplot(data = quantitatives)
+ax.set_title("Boxplots of Iris' characteristics")
+plt.show()
+```
+![Image of Seaborn Boxplot Example](https://github.com/kevinkevin556/SRDV/blob/master/EDA%20Examining%20Distributions/One%20Quantitative%20Variable/image/seaborn_boxplot.png?raw=true)
