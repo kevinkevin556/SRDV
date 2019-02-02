@@ -61,3 +61,5 @@ ax.set_title("Boxplots of Iris' characteristics")
 plt.show()
 ```
 ![Image of Seaborn Boxplot Example](https://github.com/kevinkevin556/SRDV/blob/master/EDA%20Examining%20Distributions/One%20Quantitative%20Variable/image/seaborn_boxplot.png?raw=true)
+- seaborn.boxplot: https://seaborn.pydata.org/generated/seaborn.boxplot.html?highlight=boxplot#seaborn.boxplot
+- 
